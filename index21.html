@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrawHub - Create Digital Art</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Global styles */
+        .hero {
+            min-height: 400px;
+            background-image: url('https://imgur.com/a/nWWq3pe'); /* Ensure correct path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 30px 0;
+            position: relative;
+        }
+
+        /* Fix overlay issue */
+        .hero::before {
+            display: none !important;
+        }
+
+        .hero .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .info-section {
+            min-height: 400px;
+            background-image: url('https://imgur.com/a/Qy6aAS4'); /* Ensure correct path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: black;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        /* Mobile Specific Fixes */
+        @media (max-width: 768px) {
+            .hero {
+                background-image: url('https://imgur.com/a/nWWq3pe') !important; /* Force apply */
+                background-size: cover !important;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+            }
+
+            .info-section {
+                background-image: url('https://imgur.com/a/Qy6aAS4') !important; /* Force apply */
+                background-size: cover !important;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+            }
+
+            /* Safari Fix */
+            @supports (-webkit-touch-callout: none) {
+                .hero, .info-section {
+                    background-image: url('stripe-color-swatches-vector.jpg') !important;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">DrawHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Our Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Create Your Own Digital Drawings</h1>
+            <p>Unleash Your Creativity, One Stroke at a Time!</p>
+            <a href="#about" class="btn btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <div class="info-section">
+        <section id="about" class="container py-4">
+            <h2 class="text-center">About DrawHub</h2>
+            <p class="text-center">DrawHub is an interactive platform where artists of all levels can create, explore, and share their digital drawings effortlessly.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="container py-4">
+            <h2 class="text-center services-title">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h4>Intuitive Drawing Tools</h4>
+                    <p>Access a variety of brushes, colors, and shapes to bring your ideas to life.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4>Layered Editing</h4>
+                    <p>Work on multiple layers for detailed and professional-looking digital art.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4>Save & Share</h4>
+                    <p>Save your drawings and share them with the world or download them instantly.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container py-2">
+            <h2 class="text-center">Contact Us</h2>
+            <p class="text-center">Email: support@drawhub.com | Phone: +123456789</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="text-center">&copy; 2025 DrawHub. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
